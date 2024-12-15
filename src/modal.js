@@ -83,3 +83,7 @@ const categories = [
   $('#myModal').on('hidden.bs.modal', function () {
     $('#myModal').removeClass('modal-open');
   });
+
+  $('.btn-submit').on('click', function () {
+    $('.info').removeClass('d-none');
+  });
