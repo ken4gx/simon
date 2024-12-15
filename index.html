@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SIMON - Sales & Inventory Management Online</title>
+    <meta name="description" content="Explore a wide range of car spare parts for various brands and models. Fast shipping, competitive prices, and guaranteed quality." />
+    <meta name="keywords" content="car spare parts, auto parts, brake pads, engine parts, buy car parts online, europeen car parts" />
   </head>
   <body>
     <div id="loader">
@@ -16,7 +18,10 @@
             <div class="logo">
               <img src="src/images/logo.png" class="" alt="Logo SIMON" class="img-fluid" />
             </div>
-            <a href="#" data-toggle="modal" data-target="#myModal" class="btn-demo"> <img class="calendar pr-2" src="src/images/calandar.png" alt="Calendar"> <span id="demo">Réserver une démo</span></a>
+            <a href="#" data-toggle="modal" data-target="#myModal" class="btn-demo"> 
+              <img class="calendar" src="src/images/calandar.png" alt="Calendar"> 
+              <span id="demo" class="pl-2">Réserver une démo</span>
+            </a>
           </div>
         </header>
         <div class="container hero-content">
@@ -26,7 +31,7 @@
             Chers professionnels de la pièce de rechange et carrosserie automobile : passez en mode pilote automatique et laissez Simon vendre en ligne 24h/24 et 7j/7.
           </p>
           <div class="hook d-flex justify-content-center align-items-center">
-            <a href="#" class="btn-send">Je suis intéressé <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+            <a href="#" class="btn-send" data-toggle="modal" data-target="#myModal">Je suis intéressé <img class="pl-2" src="src/images/send.png" alt="Send"></a>
             <small class="pl-3 font-weight-bold">🎁 Offre de lancement <br>-50% la première année !</small>
           </div>
           
@@ -42,15 +47,18 @@
             </div>
             
           </div>
+          <div class="mobile-animate">
+            <img id="dashboard" src="src/images/dash.jpg" alt="SIMON sur Laptop" class="img-fluid my-4 dashboard" />
+          </div>
           
           <div class="row d-flex justify-content-around align-items-center">
-            <div class="col-md-6 .features-content text-left">
+            <div class="col-md-6 features-content">
               <h3 class="py-3">Sales & Inventory <br> Management Online</h3>
               <p>
                 Accélérez votre transformation digitale grâce à ce nouvel outil innovant qui transformera votre boutique physique en boutique virtuelle 100% automatisée!
               </p>
-              <a href="#" class="btn-send mt-3">En savoir plus <img class="pl-2" src="src/images/send.png" alt="Send"></a>
-              
+              <a href="#" class="btn-send mt-3" data-toggle="modal" data-target="#myModal">En savoir plus <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+               
             </div>
             <div class="col-md-6 container-fluid">
               <div class="window">
@@ -82,7 +90,7 @@
               <p>
                 En effet, la version mobile de SIMON vous permettra de consulter votre stock en temps réel où que vous soyez, et de recevoir des notifications pour chaque commande confirmée, c'est ça la magie du pilote automatique !
               </p>
-              <a href="#" class="btn-send">Essayer SIMON <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+              <a href="#" class="btn-send" data-toggle="modal" data-target="#myModal">Essayer SIMON <img class="pl-2" src="src/images/send.png" alt="Send"></a>
             </div>
           </div>
         </div>
@@ -101,62 +109,94 @@
 
     <!-- The Modal -->
     <div class="modal" id="myModal">
-      <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
           <!-- Modal body -->
           <div class="modal-body">
-            <div class="row form-group">
-              <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  class="form-control"
-                  placeholder=" "
-                />
-                <label for="lastname">Nom</label>
+            <form action="#" method="POST">
+              <div class="row form-group">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    class="form-control"
+                    placeholder=" "
+                  />
+                  <label for="lastname">Nom</label>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
+                  <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    class="form-control"
+                    placeholder=" "
+                  />
+                  <label for="firstname">Prénom</label>
+                </div>
               </div>
-              <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
-                <input
-                  type="text"
-                  id="firstname"
-                  name="firstname"
-                  class="form-control"
-                  placeholder=" "
-                />
-                <label for="firstname">Prénom</label>
+              <div class="row form-group">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
+                  <input
+                    type="text"
+                    id="mobile"
+                    name="mobile"
+                    class="form-control"
+                    placeholder=" "
+                  />
+                  <label for="mobile">Numéro de Téléphone</label>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6">
+                  <select name="state" id="state" class="form-control state">
+                    <option value="">Selectionner une Wilaya</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
-                <input
-                  type="text"
-                  id="mobile"
-                  name="mobile"
-                  class="form-control"
-                  placeholder=" "
-                />
-                <label for="mobile">Numéro de Téléphone</label>
+              <div class="row form-group">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                  <select name="district" id="district" class="form-control district">
+  
+                  </select>
+                </div>
               </div>
-              <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 floating-label">
-                <select name="state" id="state" class="form-control">
-
-                </select>
-                <label for="state">Wilaya</label>
+              <div class="row form-group">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6">
+                  <select name="category[]" id="category" class="form-control category">
+                    <!-- <option value="">Selectionner une ou plusieurs Catégorie</option> -->
+                  </select>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6">
+                  <select name="brand[]" id="brand" class="form-control brand">
+                    <!-- <option value="">Selectionner une ou plusieurs Marque</option> -->
+                  </select>
+                </div>
               </div>
-            </div>
+              <div class="row form-group">
+                <div class="col-md-12 d-flex justify-content-center flex-column text-center">
+                  <h2 class="text-white">
+                    NOTRE SERVICE CLIENT <span>VOUS CONTACTERA</span> POUR <br> CONFIRMER <span class="shine">VOTRE INTERÊT !</span>
+                  </h2>
+                  <hr>
+                  <h2 class="text-white" dir="rtl">
+                    ستتلقى إتصال من خدمة العملاء لتأكيد إهتمامك ! <br> <span class="shine">خدمة العملاء</span>  <span class="text-left shine" dir="ltr">0670 643 505</span>
+                  </h2>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button type="submit" class="btn-send">
+                    Envoyer <img class="pl-2" src="src/images/send.png" alt="Send">
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-
-          <!-- Modal footer
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          </div> -->
-
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script type="module" src="src/main.js"></script>
     
   </body>

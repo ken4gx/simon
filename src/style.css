@@ -274,6 +274,31 @@ footer p {
   color: #5b5b5c;
 }
 
+/* Apply the blur effect to the background */
+.modal-open {
+  backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: darkens the background */
+  transition: backdrop-filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.modal-content {
+  background: none !important;
+}
+
+.shine{
+  color:#FF3D00 !important;
+}
+
+hr{
+  border: #FF3D00 solid 3px !important;
+  width: 30% !important;
+  border-radius: 16px !important;
+}
+
+.mobile-animate{
+  display: none;
+}
+
 
 @media (max-width: 576px) { /* Mobile devices */
   body {
@@ -367,6 +392,14 @@ footer p {
     z-index: 2;
     
     width: 200px;
+  }
+
+  .animate{
+    display: none;
+  }
+
+  .mobile-animate{
+    display: block;
   }
 
   
