@@ -1,0 +1,26 @@
+{
+  "name": "piassa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "apexcharts": "^4.2.0",
+    "bootstrap": "4",
+    "chart.js": "^4.4.7",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
+    "select2": "^4.1.0-rc.0"
+  }
+}

@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Poppins",Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgb(131, 32, 2) 0%, rgba(0,0,0,1) 100%);
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* Adjust for your design */
+  z-index: 1000;
+  opacity: 1; /* Fully visible initially */
+  transition: opacity 1s ease-out; /* Smooth fading effect */
+}
+
+#loader-logo {
+  width: 150px;
+  height: auto;
+}
+
+u {
+  text-decoration-color:#ff3c00;
+  border-radius: 10px;
+}
+
+.hero {
+  opacity: 0;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+  
+  /* background-image: radial-gradient(#ff3c00d0 5%,rgb(0, 0, 0) 80%) ; */
+}
+
+.hero::before{
+  content: '';
+  background: url('src/images/warehouse.png') center;
+  backdrop-filter: blur(400px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(400px); /* For Safari support */
+  /* -webkit-mask-image: linear-gradient(black, transparent); */
+  /* mask-image: linear-gradient (black, transparent); */
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+}
+
+.hero header {
+  isolation: isolate;
+}
+.hero div{
+  isolation: isolate;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+.hero .container .simon {
+  width: 300px ;
+  height: auto;
+  -webkit-mask-image: linear-gradient(black 60%, transparent 80%);
+  mask-image: linear-gradient (black, transparent);
+}
+
+.hero-content h1{
+  font-size: 32px;
+}
+.hero-content p{
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.features img {
+  max-width: 100%;
+  height: auto;
+}
+
+.features .animate {
+  position: relative;
+}
+.features .animate .dash-animate {
+  position: absolute;
+  top: 94px;
+  left: 281px;
+  width: 545px;
+  perspective: 1200px;
+  border-radius: 16px;
+  /* transform-style: preserve-3d;
+  transform: rotateX(-45deg); */
+}
+.features .animate #dashboard {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: rotateX(-45deg);
+  border-radius: 16px;
+  image-rendering: auto; /* Ensure default smoothing */
+  backface-visibility: hidden; /* Prevent visual artifacts during transforms */
+  transform-origin: center;
+}
+
+.features-content{
+  text-align: left !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.features .list-unstyled li{
+    text-align: left;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+.features .list-unstyled li::before{
+  content: url('src/images/check.png');
+  /* background: url('src/images/check.png'); */
+  position: absolute;
+  left: 0px;
+}
+
+footer img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('src/images/window.png'); /*Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Set below the content layer */
+}
+
+.window-content {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust text color based on the image */
+  text-align: center;
+  z-index: 2; /* Content above the background */
+  width: 100%;
+  /* background-image: url('src/images/window.png'); */
+}
+
+.mobile h3 {
+  font-size: 32px;
+}
+
+.mobile p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.btn-demo{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #270d05b8; /* Button color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 16px; /* Rounded corners */
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.btn-demo:hover {
+  background-color: #E63200; /* Slightly darker on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  color: white !important;
+}
+.btn-send{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #6225128f; /* Button color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #FF3D00;
+  border-radius: 16px; /* Rounded corners */
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.btn-send:hover {
+  background-color: #E63200; /* Slightly darker on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  color: white !important;
+}
+
+.mob-animate{
+  position: relative;
+}
+
+.mob-animate .chart {
+  position: absolute;
+  left: 345px;
+  top: 110px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+.mob-animate img {
+  position: relative;
+  z-index: 2;
+  
+  /* width: 200px; */
+}
+
+/* Floating Label Container */
+.floating-label {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Field Padding */
+.floating-label input {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Label Styling */
+.floating-label label {
+  position: absolute;
+  top: 0.5rem;
+  left: 1.75rem;
+  font-size: 1rem;
+  color: #6c757d;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+/* Label on Focus or When Input is Filled */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -0.25rem;
+  left: 1.25rem;
+  font-size: 0.75rem;
+  color: #5b5b5c;
+}
+
+
+@media (max-width: 576px) { /* Mobile devices */
+  body {
+    text-align: justify !important;
+  }
+
+  .hero-content{
+    margin-top: 50px;
+  }
+  
+  .features {
+    text-align: center !important;
+  }
+  .features h2,h3{
+    font-size: 24px;
+  }
+
+  .features-content{
+    text-align: center !important;
+  }
+
+  .window-image{
+    background-size: 106% 90%;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+  }
+
+  .window-content {
+    top: 65%;
+    left: 55%;
+    text-align: justify;
+    font-size: 13px;
+  }
+
+  footer .container {
+    flex-direction: column-reverse !important;
+  }
+  .hook {
+    flex-direction: column !important;
+  }
+
+  .hook small{
+    padding-top: 10px !important;
+    padding-left: 0 !important;
+  }
+
+  #demo{
+    display: none;
+  }
+
+  .calendar {
+    padding: 0 !important;
+  }
+
+  header{
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Blur effect */
+    background-color: rgba(38, 11, 2, 0.43);
+    margin-top: -50px;
+    z-index: 99999;
+  }
+
+  .hero-content p{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .mobile{
+    text-align: center;
+  }
+
+  .mobile h3 {
+    font-size: 24px;
+  }
+  
+  .mobile p {
+    font-size: 14px;
+  }
+
+  .mob-animate .chart {
+    position: absolute;
+    left: 250px;
+    top: 80px;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+  }
+  .mob-animate img {
+    position: relative;
+    z-index: 2;
+    
+    width: 200px;
+  }
+
+  
+}
