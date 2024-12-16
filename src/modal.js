@@ -87,3 +87,30 @@ const categories = [
   $('.btn-submit').on('click', function () {
     $('.info').removeClass('d-none');
   });
+
+  $('.middle').on('click',function(){
+    // Get the current scroll position
+    var scrollValue = $(window).scrollTop();
+
+    // Calculate total scrollable height
+    var totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Calculate the equivalent vh value
+    var vhEquivalent = (scrollValue / totalScrollableHeight) * 100;
+
+    $('#myModal').css('top',`${vhEquivalent.toFixed(2)-17}%`);
+
+    console.log($('#myModal').css('top'),vhEquivalent);
+  });
+  $('.bottom').on('click',function(){
+    // Get the current scroll position
+    var scrollValue = $(window).scrollTop();
+
+    // Calculate total scrollable height
+    var totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Calculate the equivalent vh value
+    var vhEquivalent = (scrollValue / totalScrollableHeight) * 100;
+
+    $('#myModal').css('top',`${vhEquivalent.toFixed(2)-25}%`);
+  });
