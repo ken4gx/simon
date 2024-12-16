@@ -82,6 +82,7 @@ const categories = [
   // When the modal is hidden, remove the blue background
   $('#myModal').on('hidden.bs.modal', function () {
     $('#myModal').removeClass('modal-open');
+    $('#myModal').css('top') != 0 ? $('#myModal').css('top',0) : "";
   });
 
   $('.btn-submit').on('click', function () {
