@@ -45,7 +45,7 @@ u {
 
 .hero::before{
   content: '';
-  background: url('@/images/warehouse.png') center;
+  background: url('/images/warehouse.png') center;
   backdrop-filter: blur(400px); /* Apply blur effect */
   -webkit-backdrop-filter: blur(400px); /* For Safari support */
   /* -webkit-mask-image: linear-gradient(black, transparent); */
@@ -123,7 +123,7 @@ u {
 }
 
 .features .list-unstyled li::before{
-  content: url('@/images/check.png');
+  content: url('/images/check.png');
   /* background: url('src/images/check.png'); */
   position: absolute;
   left: 0px;
@@ -150,7 +150,7 @@ footer img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('@/images/window.png'); /*Replace with your image path */
+  background-image: url('/images/window.png'); /*Replace with your image path */
   background-size: cover;
   background-position: center;
   z-index: 1; /* Set below the content layer */
