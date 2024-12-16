@@ -43,8 +43,8 @@ const categories = [
     placeholder: 'Catégorie',
     width: '100%',
     theme: "bootstrap4",
-    multiple:true,
-    // allowClear: true,
+    // multiple:true,
+    allowClear: true,
     data:categories
   });
   
@@ -52,8 +52,8 @@ const categories = [
     placeholder: 'Marques Proposées',
     width: '100%',
     theme: "bootstrap4",
-    multiple:true,
-    // allowClear: true,
+    // multiple:true,
+    allowClear: true,
     data:brands
   });
   

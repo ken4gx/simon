@@ -9,29 +9,29 @@
   </head>
   <body>
     <div id="loader">
-      <img src="src/images/simon.png" alt="Logo" id="loader-logo" />
+      <img src="/images/simon.png" alt="Logo" id="loader-logo" />
     </div>
     <main>
       <section class="hero text-white text-center">
         <header class="py-3">
           <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
-              <img src="src/images/logo.png" class="" alt="Logo SIMON" class="img-fluid" />
+              <img src="/images/logo.png" class="logo" alt="Logo SIMON" class="img-fluid" />
             </div>
             <a href="#" data-toggle="modal" data-target="#myModal" class="btn-demo"> 
-              <img class="calendar" src="src/images/calandar.png" alt="Calendar"> 
-              <span id="demo" class="pl-2">Réserver une démo</span>
+              <img class="calendar" src="/images/calandar.png" alt="Calendar"> 
+              <span id="demo" class="pl-2">Réservez une démo</span>
             </a>
           </div>
         </header>
         <div class="container hero-content">
-          <img src="src/images/simon.png" class="simon" alt="Robot SIMON" class="img-fluid mb-3"/>
+          <img src="/images/simon.png" class="simon" alt="Robot SIMON" class="img-fluid mb-3"/>
           <h1>Entraîné pour être <br> le commercial du mois... <u>Chaque mois !</u></h1>
           <p>
             Chers professionnels de la pièce de rechange et carrosserie automobile : passez en mode pilote automatique et laissez Simon vendre en ligne 24h/24 et 7j/7.
           </p>
           <div class="hook d-flex justify-content-center align-items-center">
-            <a href="#" class="btn-send" data-toggle="modal" data-target="#myModal">Je suis intéressé <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+            <a href="#" class="btn-demo" data-toggle="modal" data-target="#myModal">Je suis intéressé <img class="pl-2" src="/images/send.png" alt="Send"></a>
             <small class="pl-3 font-weight-bold">🎁 Offre de lancement <br>-50% la première année !</small>
           </div>
           
@@ -41,14 +41,14 @@
         <div class="container">
           <h2>Découvrez SIMON</h2>
           <div class="animate">
-            <img src="src/images/macbook.png" alt="SIMON sur Laptop" class="img-fluid my-4" />
+            <img src="/images/macbook.png" alt="SIMON sur Laptop" class="img-fluid my-4" />
             <div class="dash-animate">
-              <img id="dashboard" src="src/images/dash.jpg" alt="SIMON sur Laptop" class="img-fluid my-4 dashboard" />
+              <img id="dashboard" src="/images/dash.jpg" alt="SIMON sur Laptop" class="img-fluid my-4 dashboard" />
             </div>
             
           </div>
           <div class="mobile-animate">
-            <img id="dashboard" src="src/images/dash.jpg" alt="SIMON sur Laptop" class="img-fluid my-4 dashboard" />
+            <img id="dashboard" src="/images/dash.jpg" alt="SIMON sur Laptop" class="img-fluid my-4 dashboard" />
           </div>
           
           <div class="row d-flex justify-content-around align-items-center">
@@ -57,7 +57,7 @@
               <p>
                 Accélérez votre transformation digitale grâce à ce nouvel outil innovant qui transformera votre boutique physique en boutique virtuelle 100% automatisée!
               </p>
-              <a href="#" class="btn-send mt-3" data-toggle="modal" data-target="#myModal">En savoir plus <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+              <a href="#" class="btn-demo mt-3" data-toggle="modal" data-target="#myModal">En savoir plus <img class="pl-2" src="/images/send.png" alt="Send"></a>
                
             </div>
             <div class="col-md-6 container-fluid">
@@ -82,7 +82,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 text-center mb-4 mb-md-0 mob-animate">
-              <img src="src/images/mob.png" alt="SIMON sur Mobile" class="img-fluid" />
+              <img src="/images/mob.png" alt="SIMON sur Mobile" class="img-fluid" />
               <div class="chart"><canvas id="chart"></canvas></div>
             </div>
             <div class="col-md-6">
@@ -90,7 +90,7 @@
               <p>
                 En effet, la version mobile de SIMON vous permettra de consulter votre stock en temps réel où que vous soyez, et de recevoir des notifications pour chaque commande confirmée, c'est ça la magie du pilote automatique !
               </p>
-              <a href="#" class="btn-send" data-toggle="modal" data-target="#myModal">Essayer SIMON <img class="pl-2" src="src/images/send.png" alt="Send"></a>
+              <a href="#" class="btn-demo" data-toggle="modal" data-target="#myModal">Essayez SIMON <img class="pl-2" src="/images/send.png" alt="Send"></a>
             </div>
           </div>
         </div>
@@ -100,9 +100,9 @@
       <div class="container d-flex justify-content-between align-content-center">
         <p>&copy; PIASSA, 2024. Tous droits réservés.</p>
         <div class="d-flex justify-content-center pb-3">
-          <a href="#" class="mx-2"><img src="src/images/linkedin.png" alt="LinkedIn" class="img-fluid" /></a>
-          <a href="#" class="mx-2"><img src="src/images/insta.png" alt="Instagram" class="img-fluid" /></a>
-          <a href="#" class="mx-2"><img src="src/images/fb.png" alt="Facebook" class="img-fluid" /></a>
+          <a href="#" class="mx-2"><img src="/images/linkedin.png" alt="LinkedIn" class="img-fluid" /></a>
+          <a href="#" class="mx-2"><img src="/images/insta.png" alt="Instagram" class="img-fluid" /></a>
+          <a href="#" class="mx-2"><img src="/images/fb.png" alt="Facebook" class="img-fluid" /></a>
         </div>
       </div>
     </footer>
@@ -154,23 +154,26 @@
                   </select>
                 </div>
               </div>
-              <div class="row form-group">
-                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+              <div class="row form-group floating-label">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12 ">
                   <select name="district" id="district" class="form-control district">
   
                   </select>
                 </div>
               </div>
-              <div class="row form-group">
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6">
-                  <select name="category[]" id="category" class="form-control category">
-                    <!-- <option value="">Selectionner une ou plusieurs Catégorie</option> -->
+              <div class="row form-group floating-label">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6" >
+                  <select name="category[]" id="category" class="form-control category" multiple>
+                    <option value="">Catégorie</option>
                   </select>
+                  
+
                 </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6">
-                  <select name="brand[]" id="brand" class="form-control brand">
+                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6" >
+                  <select name="brand[]" id="brand" class="form-control brand" multiple>
                     <!-- <option value="">Selectionner une ou plusieurs Marque</option> -->
                   </select>
+                 
                 </div>
               </div>
               <div class="row form-group info d-none">
@@ -186,8 +189,8 @@
               </div>
               <div class="row form-group">
                 <div class="col-md-12 d-flex justify-content-center">
-                  <button type="button" class="btn-send btn-submit">
-                    Envoyer <img class="pl-2" src="src/images/send.png" alt="Send">
+                  <button type="button" class="btn-demo btn-submit">
+                    Envoyer <img class="pl-2" src="/images/send.png" alt="Send">
                   </button>
                 </div>
               </div>

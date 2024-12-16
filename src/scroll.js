@@ -20,8 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.fromTo(
       loaderLogo,
       { scale: 0.5, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1.5,width:'200px', translateY:'-5vh', ease: "power2.inOut" }
+      { scale: 1, opacity: 1, duration: 1.5,width:'200px', translateY:'-5vh', ease: "power2.inOut", }
     );
+    
   
     // Animate loader transition to the hero section
     gsap.to(loader, {
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.fromTo(
           heroLogo,
           { y: -50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+          { y: 0, opacity: 1, duration: 2, ease: "power2.out" }
         );
       },
     });
@@ -242,10 +243,10 @@ else {
     tl.to(chart.data.datasets[0].data, {
       scrollTrigger: {
         trigger: ".chart",
-        start: "top center",
+        start: "-30vh center",
         end: "bottom center",
         scrub: true,
-        // markers: true, // Debugging markers
+        //markers: true, // Debugging markers
       },
       duration: 1,
       endArray: [65,35], // New values
