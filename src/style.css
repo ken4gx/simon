@@ -440,7 +440,14 @@ hr{
   }
 
   .select2-container--default .select2-selection--multiple {
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep items on one line */
     height: auto; /* Let it adjust dynamically */
+  }
+
+  .select2-container--default .select2-selection__choice {
+    max-width: unset; /* Allow items to display fully */
   }
 
   
