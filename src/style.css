@@ -439,5 +439,9 @@ hr{
     font-size: 20px !important;
   }
 
+  .select2-container--default .select2-selection--multiple {
+    height: auto; /* Let it adjust dynamically */
+  }
+
   
 }
