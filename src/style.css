@@ -313,15 +313,16 @@ hr{
   width: 100% !important; /*makes the placeholder to be 100% of the width while there are no options selected*/
 }
 
-.select2-container--default .select2-selection--multiple::after {
-  content: "\25BC"; /* Unicode for dropdown arrow */
-  position: absolute;
-  right: 10px; /* Adjust the position as needed */
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: #6c757d; /* Match Bootstrap placeholder color */
-  pointer-events: none; /* Ensure the arrow doesn’t interfere with clicks */
+
+
+/* Ensure selected items stay inside the input view */
+.select2-container--default .select2-selection__choice {
+  display: inline-block;
+  margin: 2px 5px; /* Space between selected items */
+  max-width: calc(100% - 10px); /* Prevent overflow */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate overflowing text */
 }
 
 
