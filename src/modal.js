@@ -4,6 +4,7 @@ import select2 from 'select2';
 import {wilaya, commune} from "./wilaya.js";
 select2();
 
+const viewportWidth = window.innerWidth;
 
 const categories = [
     {id:1,text:'Pièces Mécaniques et Electriques'},
@@ -99,9 +100,13 @@ const categories = [
     // Calculate the equivalent vh value
     var vhEquivalent = (scrollValue / totalScrollableHeight) * 100;
 
-    $('#myModal').css('top',`${vhEquivalent.toFixed(2)-17}%`);
+    const viewportWidth = window.innerWidth;
 
-    console.log($('#myModal').css('top'),vhEquivalent);
+    if(viewportWidth < 768) $('#myModal').css('top',`${vhEquivalent.toFixed(2)-12}%`);
+      else $('#myModal').css('top',`${vhEquivalent.toFixed(2)-17}%`);
+    
+
+    
   });
   $('.bottom').on('click',function(){
     // Get the current scroll position
@@ -113,5 +118,8 @@ const categories = [
     // Calculate the equivalent vh value
     var vhEquivalent = (scrollValue / totalScrollableHeight) * 100;
 
-    $('#myModal').css('top',`${vhEquivalent.toFixed(2)-25}%`);
+    if(viewportWidth < 768) $('#myModal').css('top',`${vhEquivalent.toFixed(2)-35}%`);
+      else $('#myModal').css('top',`${vhEquivalent.toFixed(2)-25}%`);
+
+    // $('#myModal').css('top',`${vhEquivalent.toFixed(2)-25}%`);
   });

@@ -10,6 +10,8 @@ const tl = gsap.timeline();
 
 const viewportWidth = window.innerWidth;
 
+let labelsVisible = false;
+
 document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
     const loaderLogo = document.getElementById("loader-logo");
@@ -79,7 +81,8 @@ if (viewportWidth < 768) {
           hoverOffset: 4
         }]
     };
-
+     // A flag to control when labels are drawn
+    // let labelsVisible = false;
     const chart = new Chart(ctx,{
         type: 'pie',
         data: data,
@@ -102,6 +105,8 @@ if (viewportWidth < 768) {
           {
             id: 'labelOnSlices',
             afterDraw(chart) {
+              // if(!labelsVisible) return;
+
               const { ctx, chartArea: { width, height }, data } = chart;
               const meta = chart.getDatasetMeta(0); // Dataset metadata
               const total = data.datasets[0].data.reduce((a, b) => a + b, 0); // Total value of data
@@ -188,14 +193,14 @@ else {
           hoverOffset: 4
         }]
     };
-
+    
     const chart = new Chart(ctx,{
         type: 'pie',
         data: data,
         options: {
           responsive: true,
           animation: {
-            delay:2000,
+            delay:1000,
             duration:1000
           },
           rotation: 210,
@@ -211,6 +216,7 @@ else {
           {
             id: 'labelOnSlices',
             afterDraw(chart) {
+              if(!labelsVisible) return;
               const { ctx, chartArea: { width, height }, data } = chart;
               const meta = chart.getDatasetMeta(0); // Dataset metadata
               const total = data.datasets[0].data.reduce((a, b) => a + b, 0); // Total value of data
@@ -246,6 +252,26 @@ else {
         start: "-30vh center",
         end: "bottom center",
         scrub: true,
+        onEnter: () => {
+          // Reset the animation and redraw the chart when scrolled into view
+          labelsVisible = false;
+          chart.options.animation.onComplete = function () {
+            labelsVisible = true;
+            chart.draw();
+          };
+          chart.reset();
+          chart.update();
+        },
+        onLeaveBack: () => {
+          // Reset the animation and redraw the chart when scrolled into view
+          // labelsVisible = false;
+          chart.options.animation.onComplete = function () {
+            labelsVisible = false;
+            chart.draw();
+          };
+          //chart.reset();
+          chart.update();
+        },
         //markers: true, // Debugging markers
       },
       duration: 1,
